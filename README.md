@@ -1,8 +1,8 @@
-![Github Actions](https://github.com/ruafelianna/SilvaViridis.Python.TemplateProject/workflows/Build/badge.svg)
+![Github Actions](https://github.com/ruafelianna/SilvaViridis.Python.LinuxAPI/workflows/Build/badge.svg)
 
-# SilvaViridis.Python.TemplateProject
+# SilvaViridis.Python.LinuxAPI
 
-Template python project
+LinuxAPI wrapper
 
 ### Usage
 
@@ -17,8 +17,8 @@ Template python project
 2. Execute in your shell
 
 ```sh
-git clone git@github.com:ruafelianna/SilvaViridis.Python.TemplateProject.git \
-    && cd SilvaViridis.Python.TemplateProject \
+git clone git@github.com:ruafelianna/SilvaViridis.Python.LinuxAPI.git \
+    && cd SilvaViridis.Python.LinuxAPI \
     && chmod u+x scripts/*.sh \
     && ./scripts/setup.sh
 ```
@@ -33,7 +33,6 @@ git clone git@github.com:ruafelianna/SilvaViridis.Python.TemplateProject.git \
 
 - `pdm run clean` - cleans build and test files.
 - `pdm run build` - installs dependencies, runs static type checker and tests, builds a package.
-- `pdm run test` - runs tests with coverage report.
 - `pdm run update_lock` - updates `pdm.lock` file.
 
 ### Documentation
