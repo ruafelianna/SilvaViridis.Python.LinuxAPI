@@ -6,6 +6,7 @@ authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
 ]
 dependencies = [
+    "pyudev>=0.24.3"
 ]
 requires-python = ">=3.13"
 readme = "README.md"
