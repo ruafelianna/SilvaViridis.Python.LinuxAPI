@@ -1,6 +1,6 @@
 [project]
 name = "SilvaViridis.Python.LinuxAPI"
-version = "0.1.1"
+version = "0.1.2"
 description = "LinuxAPI wrapper"
 authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
