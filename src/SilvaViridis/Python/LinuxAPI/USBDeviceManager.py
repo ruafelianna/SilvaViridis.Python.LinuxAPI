@@ -56,7 +56,7 @@ def build_usb_tree(
             return
 
         ports_num = parent.device.data.attributes.get("maxchild")
-        ports_num = 0 if ports_num is None or not isinstance(ports_num, str) else int(ports_num)
+        ports_num = 0 if ports_num is None or not isinstance(ports_num, str | bytes) else int(ports_num)
 
         for i in range(ports_num):
             port_path = f"{parent_interface.sys_path}/{parent.device.data.sys_name}-port{i + 1}"
