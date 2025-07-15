@@ -5,7 +5,7 @@
 groups = ["default", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:bf7d4b802f9997726125251d0de2886d66dbaa51a4ed8b8a7942ce7192a7e3b4"
+content_hash = "sha256:866771f2929887c65d5d666d5e86cce5c8e962f6322297270e7de1d13f30c315"
 
 [[metadata.targets]]
 requires_python = ">=3.13"
@@ -45,6 +45,17 @@ groups = ["default"]
 files = [
     {file = "pyudev-0.24.3-py3-none-any.whl", hash = "sha256:e8246f0a014fe370119ba2bc781bfbe62c0298d0d6b39c94e83102a8a3f56960"},
     {file = "pyudev-0.24.3.tar.gz", hash = "sha256:2e945427a21674893bb97632401db62139d91cea1ee96137cc7b07ad22198fc7"},
+]
+
+[[package]]
+name = "pyudev-stubs"
+version = "0.1.2"
+requires_python = ">=3.13"
+url = "https://github.com/ruafelianna/pyudev-stubs/releases/download/v0.1.2/pyudev_stubs-0.1.2-py3-none-any.whl"
+summary = "pyudev stubs"
+groups = ["default"]
+files = [
+    {file = "pyudev_stubs-0.1.2-py3-none-any.whl", hash = "sha256:86982ed533fe197daa573e4f8f51ba0ef8df445ec6c238e535fc656d4f3646fe"},
 ]
 
 [[package]]

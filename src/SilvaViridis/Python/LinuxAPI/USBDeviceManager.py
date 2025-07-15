@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pyudev.core import Context, DeviceNotFoundAtPathError
-from pyudev.device import Device, Devices
+from pyudev import Context, DeviceNotFoundAtPathError, Device, Devices
 
 @dataclass
 class DeviceBase:
@@ -57,7 +56,7 @@ def build_usb_tree(
             return
 
         ports_num = parent.device.data.attributes.get("maxchild")
-        ports_num = 0 if ports_num is None else int(ports_num)
+        ports_num = 0 if ports_num is None or not isinstance(ports_num, str) else int(ports_num)
 
         for i in range(ports_num):
             port_path = f"{parent_interface.sys_path}/{parent.device.data.sys_name}-port{i + 1}"
@@ -138,8 +137,8 @@ def print_usb_tree(usb_tree : list[USBNode], level : int = 0):
         open = "" if manufacturer is None and product is None else " ("
         close = "" if manufacturer is None and product is None else ")"
 
-        manufacturer = "" if manufacturer is None else manufacturer.decode()
-        product = "" if product is None else product.decode()
+        manufacturer = "" if manufacturer is None or not isinstance(manufacturer, bytes) else manufacturer.decode()
+        product = "" if product is None or not isinstance(product, bytes) else product.decode()
 
         print(f"{"  " * level}[{type(node.device).__name__}] {node.device.data.sys_name}{open}{product}{join}{manufacturer}{close}")
         print_usb_tree(node.children, level + 1)
